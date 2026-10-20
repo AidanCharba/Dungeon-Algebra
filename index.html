@@ -9,6 +9,15 @@
     <title>Algebra Game</title>
     <style>
         body {
+
+  background-image: url('back.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+
+        }
+        .door {
             background-color: black;
             background-image: url('title.png');
             background-size: 1000px;
@@ -131,16 +140,11 @@ button {
                  -3px 3px 0px black;
                  display: none;
         }
-         html {
-  background-image: url('back.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-}   
+
     </style>
 </head>
 <body>
+    <p id="door"></p>
     <div id="Query"></div>
     <div id="result"></div>
     <div id="points"><span>Points:  </span>0</div>
@@ -148,6 +152,7 @@ button {
     <button id="submit">Submit</button>
     <button id="reset">Reset Game</button>
     <button id="next" style="display: none;">Next</button>
+    
     <img id="enemy1" class="enemy" src="enemy1.png">
     <img id="enemy2" class="enemy" src="enemy.png">
     <div class="button-container">
@@ -504,7 +509,7 @@ console.log(correctAnswer);
             bgMusic1.play();
             if (userAnswer === correctAnswer) {
                 document.getElementById('result').innerText = "Correct!";
-                document.body.style.backgroundImage = "url('Door1.png')"; 
+                document.getElementById('door').backgroundImage = "url('Door1.png')"; 
                 points += 1;
                 document.querySelector('#points').lastChild.nodeValue = ' ' + points;
                 document.getElementById('next').style.display = 'block';
@@ -524,7 +529,7 @@ console.log(correctAnswer);
 
         document.getElementById('next').addEventListener('click', function() {
             bgMusic1.play();
-            document.body.style.backgroundImage = "url('Door.webp')";
+            document.getElementById('door').backgroundImage = "url('Door.png')"; 
             document.body.style.backgroundSize = '700px';
             document.getElementById('result').innerText = "";
             document.getElementById('answer').value = "";
@@ -538,7 +543,7 @@ console.log(correctAnswer);
             bgMusic1.play();
             answer(); // Start the game with a question
             document.body.style.backgroundSize = '700px';
-            document.body.style.backgroundImage = "url('Door.webp')";
+            document.getElementById('door').backgroundImage = "url('Door.png')"; 
             document.getElementById('Easy').style.display = 'none';
             document.getElementById('Medium').style.display = 'none';
             document.getElementById('Hard').style.display = 'none';
@@ -553,7 +558,7 @@ console.log(correctAnswer);
             bgMusic1.play();
             bgMusic.play();bgMusic.play();
             document.body.style.backgroundSize = '700px';
-            document.body.style.backgroundImage = "url('Door.webp')";
+           document.getElementById('door').backgroundImage = "url('Door.png')"; 
             document.getElementById('Easy').style.display = 'none';
             document.getElementById('Medium').style.display = 'none';
             document.getElementById('Hard').style.display = 'none';
@@ -567,7 +572,7 @@ console.log(correctAnswer);
             answer2(); // Start the game with a question
             bgMusic1.play();
             bgMusic.play();
-            document.body.style.backgroundImage = "url('Door.webp')";
+           document.getElementById('door').backgroundImage = "url('Door.png')"; 
             document.body.style.backgroundSize = '700px';
             document.getElementById('Easy').style.display = 'none';
             document.getElementById('Medium').style.display = 'none';
