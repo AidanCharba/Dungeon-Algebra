@@ -143,7 +143,7 @@ button {
     </style>
 </head>
 <body>
-    <img id="door" class="door" src="Door.png" alt="Dungeon door">
+    <img id="door" class="door" src="Door.webp" alt="Dungeon door">
     <div id="Query"></div>
     <div id="result"></div>
     <div id="points"><span>Points:  </span>0</div>
@@ -529,7 +529,6 @@ console.log(correctAnswer);
         document.getElementById('next').addEventListener('click', function() {
             bgMusic1.play();
             
-            document.body.style.backgroundSize = '700px';
             document.getElementById('result').innerText = "";
             document.getElementById('answer').value = "";
             document.getElementById('submit').style.display = 'block';
@@ -541,7 +540,6 @@ console.log(correctAnswer);
             bgMusic.play();
             bgMusic1.play();
             answer(); // Start the game with a question
-            document.body.style.backgroundSize = '700px';
             document.getElementById('door').src = "Door.png";
             document.getElementById('Easy').style.display = 'none';
             document.getElementById('Medium').style.display = 'none';
@@ -556,7 +554,6 @@ console.log(correctAnswer);
             answer1(); // Start the game with a question
             bgMusic1.play();
             bgMusic.play();bgMusic.play();
-            document.body.style.backgroundSize = '700px';
            document.getElementById('door').src = "Door.png";
             document.getElementById('Easy').style.display = 'none';
             document.getElementById('Medium').style.display = 'none';
@@ -572,7 +569,6 @@ console.log(correctAnswer);
             bgMusic1.play();
             bgMusic.play();
            document.getElementById('door').src = "Door.png";
-            document.body.style.backgroundSize = '700px';
             document.getElementById('Easy').style.display = 'none';
             document.getElementById('Medium').style.display = 'none';
             document.getElementById('Hard').style.display = 'none';
